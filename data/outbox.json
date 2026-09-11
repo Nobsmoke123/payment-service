@@ -1,0 +1,234 @@
+[
+  {
+    "id": "a2e4cc0a-765c-438d-a003-9c63019bbfd2",
+    "eventType": "payment.created",
+    "routingKey": "payment.created",
+    "payload": {
+      "eventId": "de52d544-e28f-48e8-8cb0-0a9f52cb5260",
+      "eventType": "payment.created",
+      "occurredAt": "2026-09-11T16:41:33.290Z",
+      "requestId": "fd71706e-dded-4628-8923-35d1fd71de26",
+      "payload": {
+        "paymentId": "4db691cf-22e5-4733-9a2a-4e5384ba142d",
+        "amount": 7000,
+        "currency": "CAD",
+        "customerId": "cust_001"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:41:33.301Z",
+    "publishedAt": "2026-09-11T16:41:33.435Z"
+  },
+  {
+    "id": "3c070243-f468-4ee1-8eac-340c60889ac7",
+    "eventType": "payment.processing",
+    "routingKey": "payment.processing",
+    "payload": {
+      "eventId": "33928ded-7086-4611-abd7-5d27087eee17",
+      "eventType": "payment.processing",
+      "occurredAt": "2026-09-11T16:41:36.655Z",
+      "requestId": "fd71706e-dded-4628-8923-35d1fd71de26",
+      "payload": {
+        "paymentId": "4db691cf-22e5-4733-9a2a-4e5384ba142d",
+        "previousStatus": "pending",
+        "currentStatus": "processing"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:41:36.658Z",
+    "publishedAt": "2026-09-11T16:41:36.769Z"
+  },
+  {
+    "id": "e39dd44c-7eee-4fe2-900c-819ee0756a58",
+    "eventType": "payment.completed",
+    "routingKey": "payment.completed",
+    "payload": {
+      "eventId": "d99ec580-fd89-4965-8a67-6343851c93c7",
+      "eventType": "payment.completed",
+      "occurredAt": "2026-09-11T16:41:36.671Z",
+      "requestId": "fd71706e-dded-4628-8923-35d1fd71de26",
+      "payload": {
+        "paymentId": "4db691cf-22e5-4733-9a2a-4e5384ba142d",
+        "previousStatus": "processing",
+        "currentStatus": "completed"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:41:36.672Z",
+    "publishedAt": "2026-09-11T16:41:36.780Z"
+  },
+  {
+    "id": "6b6d18fc-77d7-4493-a6a1-ed93bd0daa83",
+    "eventType": "payment.created",
+    "routingKey": "payment.created",
+    "payload": {
+      "eventId": "2b5dacbd-1cb2-44d1-b3f4-d07deceba767",
+      "eventType": "payment.created",
+      "occurredAt": "2026-09-11T16:49:12.891Z",
+      "requestId": "934cf37e-0f4a-495a-afb5-d3aa1247855c",
+      "payload": {
+        "paymentId": "6cf379c8-62b0-4250-af16-becd9b0ff501",
+        "amount": 70000,
+        "currency": "CAD",
+        "customerId": "cust_001"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:49:12.895Z",
+    "publishedAt": "2026-09-11T16:49:12.988Z"
+  },
+  {
+    "id": "bb9ae1af-0e32-4f1c-8100-d0a49f0a59d0",
+    "eventType": "payment.processing",
+    "routingKey": "payment.processing",
+    "payload": {
+      "eventId": "3f87db82-a255-49be-94d1-8d7400f1f517",
+      "eventType": "payment.processing",
+      "occurredAt": "2026-09-11T16:49:16.059Z",
+      "requestId": "934cf37e-0f4a-495a-afb5-d3aa1247855c",
+      "payload": {
+        "paymentId": "6cf379c8-62b0-4250-af16-becd9b0ff501",
+        "previousStatus": "pending",
+        "currentStatus": "processing"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:49:16.062Z",
+    "publishedAt": "2026-09-11T16:49:16.226Z"
+  },
+  {
+    "id": "a9338c59-b49e-42fd-ab22-966c75f15a86",
+    "eventType": "payment.failed",
+    "routingKey": "payment.failed",
+    "payload": {
+      "eventId": "a74f07e6-dbc6-477d-89ad-b6fbc08aa0d2",
+      "eventType": "payment.failed",
+      "occurredAt": "2026-09-11T16:49:16.080Z",
+      "requestId": "934cf37e-0f4a-495a-afb5-d3aa1247855c",
+      "payload": {
+        "paymentId": "6cf379c8-62b0-4250-af16-becd9b0ff501",
+        "previousStatus": "processing",
+        "currentStatus": "failed"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:49:16.080Z",
+    "publishedAt": "2026-09-11T16:49:16.233Z"
+  },
+  {
+    "id": "c69f94b1-633b-4374-a63c-9fc800345299",
+    "eventType": "payment.created",
+    "routingKey": "payment.created",
+    "payload": {
+      "eventId": "5bc9fa83-6eb5-4859-9d30-f156cfd451b7",
+      "eventType": "payment.created",
+      "occurredAt": "2026-09-11T16:54:13.843Z",
+      "requestId": "a40f2633-0a44-4a57-a8fa-4ed960248586",
+      "payload": {
+        "paymentId": "9631dbfa-51c7-4db9-9ce7-ba2bc9eabf8b",
+        "amount": 9000,
+        "currency": "USD",
+        "customerId": "cust_concurrent"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:54:13.844Z",
+    "publishedAt": "2026-09-11T16:54:13.947Z"
+  },
+  {
+    "id": "9dba24e9-13d7-41b5-a868-ba460579fc74",
+    "eventType": "payment.processing",
+    "routingKey": "payment.processing",
+    "payload": {
+      "eventId": "69644f5a-bdc4-4b09-9523-1c68d7657c43",
+      "eventType": "payment.processing",
+      "occurredAt": "2026-09-11T16:54:17.032Z",
+      "requestId": "a40f2633-0a44-4a57-a8fa-4ed960248586",
+      "payload": {
+        "paymentId": "9631dbfa-51c7-4db9-9ce7-ba2bc9eabf8b",
+        "previousStatus": "pending",
+        "currentStatus": "processing"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:54:17.032Z",
+    "publishedAt": "2026-09-11T16:54:17.210Z"
+  },
+  {
+    "id": "a601da9c-2ece-4e5a-9f70-6a21ddb10b13",
+    "eventType": "payment.completed",
+    "routingKey": "payment.completed",
+    "payload": {
+      "eventId": "bfc7f39b-3f8b-4a48-ae64-8b2f9aa3cce5",
+      "eventType": "payment.completed",
+      "occurredAt": "2026-09-11T16:54:17.041Z",
+      "requestId": "a40f2633-0a44-4a57-a8fa-4ed960248586",
+      "payload": {
+        "paymentId": "9631dbfa-51c7-4db9-9ce7-ba2bc9eabf8b",
+        "previousStatus": "processing",
+        "currentStatus": "completed"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T16:54:17.042Z",
+    "publishedAt": "2026-09-11T16:54:17.221Z"
+  },
+  {
+    "id": "0a50d736-b3cc-4408-876e-a2738095e1bd",
+    "eventType": "payment.created",
+    "routingKey": "payment.created",
+    "payload": {
+      "eventId": "69c34085-6181-409c-9fc4-dd8148ca77a1",
+      "eventType": "payment.created",
+      "occurredAt": "2026-09-11T17:09:42.087Z",
+      "requestId": "1cae39a0-f007-47c1-9ac4-d9a83d5ac8b5",
+      "payload": {
+        "paymentId": "c24f7eab-958e-4e72-9945-f5aafbfe74d3",
+        "amount": 1500,
+        "currency": "USD",
+        "customerId": "cust_dlq"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T17:09:42.089Z",
+    "publishedAt": "2026-09-11T17:09:42.163Z"
+  },
+  {
+    "id": "fd2bf5b5-06af-45ea-a09e-a8611cfddcdf",
+    "eventType": "payment.processing",
+    "routingKey": "payment.processing",
+    "payload": {
+      "eventId": "1270cd6e-08b5-4ab4-8b43-ad441e1c1add",
+      "eventType": "payment.processing",
+      "occurredAt": "2026-09-11T17:09:45.227Z",
+      "requestId": "1cae39a0-f007-47c1-9ac4-d9a83d5ac8b5",
+      "payload": {
+        "paymentId": "c24f7eab-958e-4e72-9945-f5aafbfe74d3",
+        "previousStatus": "pending",
+        "currentStatus": "processing"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T17:09:45.229Z",
+    "publishedAt": "2026-09-11T17:09:45.524Z"
+  },
+  {
+    "id": "dc88ef20-638c-422d-a27d-f97290333407",
+    "eventType": "payment.completed",
+    "routingKey": "payment.completed",
+    "payload": {
+      "eventId": "be809eef-e55d-4856-bb4a-bf30ec5709a0",
+      "eventType": "payment.completed",
+      "occurredAt": "2026-09-11T17:09:45.255Z",
+      "requestId": "1cae39a0-f007-47c1-9ac4-d9a83d5ac8b5",
+      "payload": {
+        "paymentId": "c24f7eab-958e-4e72-9945-f5aafbfe74d3",
+        "previousStatus": "processing",
+        "currentStatus": "completed"
+      }
+    },
+    "status": "published",
+    "createdAt": "2026-09-11T17:09:45.258Z",
+    "publishedAt": "2026-09-11T17:09:45.531Z"
+  }
+]
