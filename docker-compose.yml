@@ -1,0 +1,58 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/api.Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      NODE_ENV: production
+      LOG_LEVEL: info
+      CORS_ORIGIN: "*"
+      PAYMENT_DELAY_MS: 3000
+      PAYMENTS_FILE_PATH: /app/data/payments.json
+      IDEMPOTENCY_FILE_PATH: /app/data/idempotency.json
+      OUTBOX_FILE_PATH: /app/data/outbox.json
+      OUTBOX_POLL_INTERVAL_MS: 500
+      RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672
+      RABBITMQ_EXCHANGE: payments.events
+      PAYMENT_QUEUE: payment.created
+      SERVICE_NAME: payment-api
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  worker:
+    build:
+      context: .
+      dockerfile: docker/worker.Dockerfile
+    environment:
+      NODE_ENV: production
+      LOG_LEVEL: info
+      PAYMENT_DELAY_MS: 3000
+      PAYMENTS_FILE_PATH: /app/data/payments.json
+      IDEMPOTENCY_FILE_PATH: /app/data/idempotency.json
+      OUTBOX_FILE_PATH: /app/data/outbox.json
+      RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672
+      RABBITMQ_EXCHANGE: payments.events
+      PAYMENT_QUEUE: payment.created
+      SERVICE_NAME: payment-worker
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
